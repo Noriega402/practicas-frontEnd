@@ -73,10 +73,11 @@ body{
     background-color: var(--text);
     border: none;
 }
-.form-container .form .form-control .primary-btn{
+.primary-btn{
     background-color: var(--green);
     color: var(--white);
     height: 50px;
+    border: none;
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
@@ -115,14 +116,30 @@ body{
     cursor: pointer;
     position: relative;
     width: 100%;
-
 }
+.form-container-four{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column;
+}
+.create-btn{
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+
 /* Para mostrar el logo en pantallas de menos de 640px */
 @media (max-width: 640px) {
     .form-container .logo{
         display: block;
     }
     .form .form-control .secondary-btn{
+        position: absolute;
+        width: 95%;
+        bottom: 0;
+    }
+    .create-btn{
         position: absolute;
         width: 95%;
         bottom: 0;
