@@ -5,6 +5,9 @@
     --gray: #C7C7C7;
     --text: #F7F7F7;
     --black: #000000;
+    --font-sm: 16px;
+    --font-md: 18px;
+    --font-lg:20px;
 }
 *{
     padding: 0;
