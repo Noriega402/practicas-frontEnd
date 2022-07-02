@@ -12,6 +12,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Quicksand', sans-serif;
@@ -373,9 +374,76 @@ body{
 }
 
 /* -------------------- */
+.navbar{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+.icon-mobile{
+    display: none;
+}
+.img-menu-mobile{
+    display: none;
+}
+.shopping-mobile{
+    display: none;
+}
+.active{
+    border: 1px solid var(--green);
+    padding: 6px 12px 6px 12px;
+    border-radius: 12px;
+    color: var(--white) !important;
+}
+.navbar .navbar-left{
+    display: flex;
+    flex-direction: row;
+}
+.navbar .navbar-right{
+    position: absolute;
+    right: 10px;
+}
+.navbar .navbar-left ul,
+.navbar .navbar-right ul{
+    display: flex;
+    align-items: center;
+}
+.navbar .navbar-right ul{
+    flex-direction: row-reverse;
+}
+.navbar .navbar-left ul li,.navbar .navbar-right ul li{
+    list-style: none;
+    margin: 5px 10px 5px 10px;
+}
+.navbar .navbar-right ul li a .icon-shopping{
+    background-color: var(--text);
+    border-radius: 50%;
+}
+.navbar .navbar-left ul li a:hover,
+.navbar .navbar-right ul li a:hover{
+    color: var(--white);
+    transition: .4s all;
+}
+.navbar .navbar-left ul li a,
+.navbar .navbar-right ul li a{
+    color: var(--gray);
+    text-decoration: none;
+    font-size: var(--font-sm);
+}
+
+
+/* -------------------- */
 
 /* Para mostrar el logo en pantallas de menos de 640px */
-@media (max-width: 640px) {
+@media (max-width: 800px){
+    .navbar .navbar-right ul li:last-child{
+        display: none;
+    }
+}
+@media (max-width: 640px){
     .form-container .logo{
         display: block;
     }
@@ -404,5 +472,24 @@ body{
     }
     .order-container .title{
         display: none;
+    }
+    /* ----------- */
+    .icon-mobile{
+        display: block;
+        background-color: var(--text);
+        padding: 8px;
+    }
+    .img-menu-mobile{
+        display: block;
+    }
+    .navbar .navbar-left{
+        display: none;
+    }
+    .shopping-mobile{
+        display: block;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
     }
 }
