@@ -476,7 +476,6 @@ body{
     /* ----------- */
     .icon-mobile{
         display: block;
-        background-color: var(--text);
         padding: 8px;
     }
     .img-menu-mobile{
